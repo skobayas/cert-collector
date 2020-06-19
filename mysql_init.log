@@ -1,0 +1,40 @@
+create database real_certs;
+
+create table real_certs.certs(
+
+!!!    fqdnをprimary keyにしてuniqueに
+
+     fqdn text,
+     ip text,
+     fqdn_ip text,
+     cn text,
+     sans text,
+     o text,
+     ou text,
+     l text,
+     st text,
+     c text,
+     not_before datetime,
+     not_after datetime,
+     serial_number text,
+     issuer_cn text,
+     issuer_o text,
+     issuer_ou text,
+
+     last_update date,
+     cert_pem text
+)
+
+create table real_certs.error(
+
+!!!    fqdnをprimary keyにしてuniqueに
+
+     fqdn text,
+     ip text,
+     fqdn_ip text,
+
+     err text,
+
+     last_update date,
+)
+
